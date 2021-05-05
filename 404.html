@@ -24,6 +24,7 @@
 
       function redirect() {
         var location = window.location;
+        console.log('location:'+location);
         var issueNumber = location.pathname.split("/")[
           PATH_SEGMENTS_TO_SKIP + 1
         ];
@@ -34,7 +35,7 @@
           (location.port ? ":" + location.port : "") +
           "/" +
           location.pathname.split("/")[PATH_SEGMENTS_TO_SKIP];
-
+         console.log('homepage:'+homepage);
         var xhr = new XMLHttpRequest();
 
         xhr.onload = function () {
